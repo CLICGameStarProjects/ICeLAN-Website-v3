@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "@styles/style.css";
+import "@styles/style.scss";
+import Layout from "@components/Layout";
 
 export const metadata: Metadata = {
   title: {
@@ -55,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <Layout>
+      {children}
+    </Layout>
   );
 }
