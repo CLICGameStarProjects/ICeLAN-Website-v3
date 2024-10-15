@@ -1,0 +1,70 @@
+.hero {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.hero-content {
+  max-width: 100%;
+}
+
+.hero-img {
+  position: relative;
+  max-width: 15em;
+}
+.hero-img-1 {
+  width: 0;
+}
+
+@media (min-width: 40rem) {
+  .hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hero-content {
+    width: 100%;
+  }
+  .hero-img {
+    max-width: 100%;
+    width: 40%;
+    margin: 1em;
+  }
+  .hero-img-1 {
+    order: 1;
+  }
+  .hero-img-2 {
+    order: 1;
+  }
+}
+
+@media (min-width: 60rem) {
+  .hero-content {
+    margin-right: 0em;
+  }
+  .hero-img {
+    position: absolute;
+    max-width: 30em;
+    width: 30%;
+  }
+  .hero-img-1 {
+    left: 0;
+    top: 22rem;
+  }
+  .hero-img-2 {
+    right: 0;
+    top: 22rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .hero-img-1 {
+    width: 28%;
+    margin-left: 2em;
+  }
+  .hero-img-2 {
+    width: 25%;
+  }
+}

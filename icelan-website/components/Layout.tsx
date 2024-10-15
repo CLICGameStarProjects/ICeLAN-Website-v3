@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 export default function MainLayout({
   children,
@@ -13,14 +14,11 @@ export default function MainLayout({
   };
   return (
     <html lang="en">
-      { /* Note: head is added automatically with specified metadata */ }
+      {/* Note: head is added automatically with specified metadata */}
       <body className={`${menuOpen ? "no-scroll" : ""}`}>
-        <Navigation
-          isOpen={menuOpen}
-          toggleMenu={toggleMenu}
-        />
+        <Navigation isOpen={menuOpen} toggleMenu={toggleMenu} />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,11 @@
+footer {
+  .social-links {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 1em;
+    padding: 0;
+  }
+  .social-link {
+    max-width: max-content;
+  }
+}
