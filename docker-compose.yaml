@@ -1,0 +1,23 @@
+# Docker-compose stack for development purposes
+# DO NOT USE THIS IN PRODUCTION
+
+name: icelan-website-devcontainer
+
+include:
+  - path: directus/directus.yaml
+services:
+  app:
+    # Build the app service from its folder
+    build:
+      # Build context, relative to the current file
+      context: ./frontend
+      # Path to Dockerfile, relative to context
+      dockerfile: Dockerfile.dev
+    user: ${USER_ID:-1000}:${GROUP_ID:-1000}
+    environment:
+      NODE_ENV: development
+    volumes:
+      # Bind-mount the app project folder into the container
+      - type: bind
+        source: ./frontend
+        target: /app
