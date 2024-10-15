@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.quick-info {
+  display: flex;
+  flex-direction: column;
+
+  margin: 2.5em 1em;
+  padding: 0;
+
+  @media (min-width: 40rem) {
+    margin: 2.5em 20%;
+  }
+  @media (min-width: 60rem) {
+    margin: 2.5em 25%;
+  }
+}
+.quick-info-item {
+  font-family: $font-title;
+  font-size: 1.4rem;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.3em;
+
+  .quick-info-icon {
+    color: var(--pink);
+    width: 1.8em;
+    height: 1.8em;
+  }
+}
+
